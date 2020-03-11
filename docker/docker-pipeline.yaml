@@ -12,6 +12,7 @@ parameters:
   latestName: ''
   imageName: ''
   stateCode: 0
+  identityServer: 'https://iusbuildidentityserver.azurewebsites.net'
 
 steps:
   - task: Docker@1
@@ -64,7 +65,7 @@ steps:
           "ClientStateID" : 0,
           "AppSettings" : {
              "URLs" : {
-               "IdentityServer" : "https://iusbuildidentityserver.azurewebsites.net"
+               "IdentityServer" : "${{ parameters.identityServer }}"
              }
           },
           "Data": {
