@@ -1,12 +1,12 @@
 parameters:
   project: ''
-  containerServiceEndpoint: 'iUSDevContainer'
+  containerServiceEndpoint: 'vtiUSDevContainer'
   helmChartLocation: ''
   helmChartName : ''
   version: 0
   semVersion: 0
-  azureContainerRegistry: 'iusdev'
-  dockerBuildToolsACR: 'iusdev'
+  azureContainerRegistry: 'vtiusdev'
+  dockerBuildToolsACR: 'vtiusdev'
   additionalRegistries: ''
 
 steps:
