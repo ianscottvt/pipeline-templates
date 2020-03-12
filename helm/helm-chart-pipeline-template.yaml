@@ -37,7 +37,7 @@ steps:
       azureSubscription : ${{ parameters.containerServiceEndpoint }}
       scriptLocation: inlineScript
       inlineScript: |
-        echo "${{parameters}}"
+        echo "container service endpoint: ${{ parameters.containerServiceEndpoint }}"
         echo "Setting version to ${{ parameters.semVersion }} in $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}/Chart.yaml"
         sed -i 's/0\.0\.0-INTERNAL/${{ parameters.semVersion }}/g' $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}/Chart.yaml
         cat $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}/Chart.yaml
