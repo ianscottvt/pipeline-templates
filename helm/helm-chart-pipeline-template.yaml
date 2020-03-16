@@ -55,9 +55,9 @@ steps:
         
         echo -e "\n Following is all the files \n\n\n"
         cat *.yaml
+        cat requirements.yaml
         echo -e "\n continuing "
-        echo -e "cat templates"
-        cat templates/*
+        ls
         helm version
         helm init --client-only
         echo "Adding ${{ parameters.azureContainerRegistry }} acr repo, on line 49"
