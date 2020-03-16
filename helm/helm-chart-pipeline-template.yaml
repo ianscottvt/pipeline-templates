@@ -54,8 +54,10 @@ steps:
         ls $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}
         
         echo -e "\n Following is all the files \n\n\n"
-        cat *.yaml
-        cat requirements.yaml
+        cat $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}/*.yaml
+        
+        echo -e "\n requirements "
+        cat $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}/requirements.yaml
         echo -e "\n continuing "
         ls
         helm version
