@@ -54,10 +54,10 @@ steps:
         ls $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}
         
         echo -e "\n Following is all the files \n\n\n"
-        ls *.yaml | cat
+        cat *.yaml
         echo -e "\n continuing "
-        echo -e "ls \templates"
-        ls templates
+        echo -e "cat templates"
+        cat templates/*
         helm version
         helm init --client-only
         echo "Adding ${{ parameters.azureContainerRegistry }} acr repo, on line 49"
