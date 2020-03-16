@@ -46,7 +46,7 @@ steps:
         sed -i 's/0\.0\.0-INTERNAL/${{ parameters.version }}/g' $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}/values.yaml
         cat $(Build.ArtifactStagingDirectory)/helm/${{ parameters.helmChartName }}/values.yaml
         helm version
-        helm init --client-only
+        helm --client-only
         echo "Adding ${{ parameters.azureContainerRegistry }} acr repo, on line 49"
         az acr helm repo add --name ${{ parameters.azureContainerRegistry }}
         echo "on line 51"
