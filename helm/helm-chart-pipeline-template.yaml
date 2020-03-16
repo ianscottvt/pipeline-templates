@@ -10,6 +10,9 @@ parameters:
   additionalRegistries: ''
 
 steps:
+  - task: HelmInstaller@1
+    inputs:
+      helmVersionToInstall: 2.14.1
   - task: AzureCLI@1
     displayName: Create Helm Chart
     inputs:
