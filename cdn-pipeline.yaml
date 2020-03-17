@@ -1,10 +1,10 @@
 parameters:
-  containerServiceEndpoint: 'iUSDevContainer'
+  containerServiceEndpoint: 'VDOL-UI-DEV'
   storageSubscription: ''
   storageContainerName: ''
   storageRMStorageAccount : ''
-  registry: 'iusdev.azurecr.io'
-  baseContainerUrl: https://iusux.blob.core.windows.net/iusux
+  registry: 'vtiusdev.azurecr.io'
+  baseContainerUrl: https://vtiusux.blob.core.windows.net/iusux
   blobPrefix: ''
 
 jobs:
