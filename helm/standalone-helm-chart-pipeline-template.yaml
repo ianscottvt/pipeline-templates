@@ -1,8 +1,8 @@
 parameters:
-  containerServiceEndpoint: 'iUSDevContainer'
+  containerServiceEndpoint: 'VDOL-UI-DEV'
   helmChartLocation: ''
   helmChartName : ''
-  registry: 'iusdev'
+  registry: 'vtiusdev'
   additionalRegistries: ''
   additionalPublicRegistries: ''
   childChartsToUpdate: ''
