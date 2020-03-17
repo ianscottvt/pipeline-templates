@@ -1,5 +1,5 @@
 parameters:
-  containerServiceEndpoint: 'iUSDevContainer'
+  containerServiceEndpoint: ''
   registry: 'vtiusdev.azurecr.io'
   project: ''
   helmChartLocation: 'application/helm'
