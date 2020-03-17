@@ -1,10 +1,10 @@
 parameters:
-  containerServiceEndpoint: 'iUSDevContainer'
+  containerServiceEndpoint: 'VDOL-UI-DEV'
   helmChartLocation: ''
   helmChartName : ''
   majorVersion: 0
   stateCode: 0
-  registry: 'iusdev'
+  registry: 'vtiusdev'
   registryHost: "azurecr.io"
   additionalRegistries: ""
   additionalPublicRegistries: ""
