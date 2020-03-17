@@ -1,6 +1,6 @@
 parameters:
   project: ''
-  containerServiceEndpoint: 'vtiUSDevContainer'
+  containerServiceEndpoint: 'VDOL-UI-DEV'
   helmChartLocation: ''
   helmChartName : ''
   version: 0
