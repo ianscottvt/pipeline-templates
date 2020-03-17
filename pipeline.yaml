@@ -1,5 +1,5 @@
 parameters:
-  containerServiceEndpoint: 'VDOL-UI-DEV'
+  containerServiceEndpoint: 'Vermont-iUS'
   registry: 'vtiusdev.azurecr.io'
   project: ''
   helmChartLocation: 'application/helm'
