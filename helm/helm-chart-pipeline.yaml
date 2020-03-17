@@ -1,12 +1,12 @@
 parameters:
-  containerServiceEndpoint: 'iUSDevContainer'
+  containerServiceEndpoint: 'VDOL-UI-DEV'
   helmChartLocation: ''
   helmChartName : ''
   Name: ''
   majorVersion: 0
   stateCode: 0
-  registry: 'iusdev.azurecr.io'
-  dockerBuildToolsACR: 'iusdev'
+  registry: 'vtiusdev.azurecr.io'
+  dockerBuildToolsACR: 'vtiusdev'
 
 jobs:
   - job: ${{ parameters.Name }}
