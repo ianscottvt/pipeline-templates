@@ -1,5 +1,5 @@
 parameters:
-  containerServiceEndpoint: 'Vermont-iUS'
+  containerServiceEndpoint: 'devacr3'
   registry: 'vtiusdev.azurecr.io'
   project: ''
   helmChartLocation: 'application/helm'
