@@ -3,6 +3,7 @@ parameters:
   Project: '' # The full path to the csproj (including the *.cspoj name)
   FeedName: '' # DEPRECATED
   Feed: '' # The Feed name to publish to
+  RestoreFeed: 'Common/CommonFeed'
   majorVersion: 0
   stateCode: 0
 
@@ -13,6 +14,14 @@ jobs:
     variables:
       version: 0.0.0.0
     steps:
+      - task: DotNetCoreCLI@2
+        displayName: dotnet restore
+        inputs:
+          command: restore
+          projects: '**/*.csproj'
+          feedsToUse: 'select'
+          vstsFeed: ${{ parameters.RestoreFeed }}
+          includeNuGetOrg: false
       - powershell: |
           Write-Host "##vso[task.setvariable variable=version;]${{ parameters.stateCode }}.${{ parameters.majorVersion }}.$([math]::floor($(build.buildId)/10000)).$($(build.buildId)%10000)"
           Write-Host "Setting csproj Version To $(version)"
